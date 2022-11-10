@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/beranda"
+        android:title="Beranda"
+        android:icon="@drawable/ic_beranda"/>
+    <item
+        android:id="@+id/materi"
+        android:title="Materi"
+        android:icon="@drawable/ic_materi"/>
+    <item
+        android:id="@+id/identifikasi"
+        android:title="Identifikasi"
+        android:icon="@drawable/ic_identifikasi"/>
+    <item
+        android:id="@+id/video"
+        android:title="Video"
+        android:icon="@drawable/ic_video"/>
+    <item
+        android:id="@+id/test"
+        android:title="Test"
+        android:icon="@drawable/ic_test"/>
+</menu>
