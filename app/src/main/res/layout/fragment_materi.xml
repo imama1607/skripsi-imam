@@ -5,12 +5,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_utama"
     tools:context="com.example.myapplication.MainActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@color/black"
         android:layout_marginTop="25dp"
         android:text="Silahkan Klik Materi..."
         android:textSize="25sp"
@@ -26,6 +29,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/tv" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

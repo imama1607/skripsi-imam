@@ -1,9 +1,11 @@
 package com.example.myapplication
 
 import android.app.Activity
+import android.content.Context
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import android.widget.BaseAdapter
 import android.widget.TextView
 
 class MyListAdapter(private val context: Activity, private val title: List<String>)

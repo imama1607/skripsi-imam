@@ -28,7 +28,6 @@ class BerandaFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_beranda, container, false)
 
     }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         pengantar = requireView().findViewById(R.id.btn_pengantar)
         val tujuan: ImageButton = view.findViewById(R.id.btn_tujuan) as ImageButton

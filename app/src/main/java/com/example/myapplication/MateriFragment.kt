@@ -1,11 +1,11 @@
 package com.example.myapplication
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
-import android.widget.ListView
+import android.widget.*
 import androidx.fragment.app.Fragment
 
 
@@ -24,13 +24,25 @@ class MateriFragment : Fragment(R.layout.fragment_materi) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         // data yang akan kita tampilkan ke dala ListView
-        val languages = listOf("Amphibia", "Porifera", "coming soon", "coming soon", "coming soon")
-        lv_materi = view?.findViewById(R.id.lv_materi) as ListView
+        val judul = listOf("Amphibia", "Porifera") //judul
+        val pdf = listOf("amphibia.pdf", "amphibia.pdf") //nama file pdf yang ada di folder assets
+        lv_materi = view.findViewById(R.id.lv_materi) as ListView
 
         // memberikan adapter ke ListView
-        lv_materi.adapter = ArrayAdapter(requireContext(), R.layout.list_materi, languages)
-        val adapter = MyListAdapter(requireActivity(), languages)
+        lv_materi.adapter = ArrayAdapter(requireContext(), R.layout.list_materi, judul)
+        val adapter = MyListAdapter(requireActivity(), judul)
         lv_materi.adapter = adapter
-    }
 
+        val tv: TextView = view.findViewById(R.id.tv)
+        tv.setOnClickListener(){
+            val intent = Intent(activity, PDFviewer::class.java)
+            startActivity(intent)
+        }
+        lv_materi.setOnItemClickListener { adapterView: AdapterView<*>, view2: View, i: Int, l: Long ->
+            val intent = Intent(activity, PDFviewer::class.java)
+            intent.putExtra("EXTRA_PDF", pdf[i])
+            startActivity(intent)
+
+        }
+    }
 }
